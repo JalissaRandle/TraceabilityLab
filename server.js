@@ -1,7 +1,6 @@
 const express = require('express')
 const cors = require('cors')
-const app = express()
-const req = require('express/lib/request')
+
 
 app.use(express.json())
 app.use(cors())
@@ -21,7 +20,7 @@ rollbar.log("Hello world!");
 
 const pets = ['dogs', 'cats', 'fish']
  
-app.get('/', (req, res) => {
+app.get('', (req, res) => {
   res.sendFile(path.join(__dirname, '/index.html'))
 })
 
