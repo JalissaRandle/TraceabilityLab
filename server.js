@@ -16,6 +16,12 @@ var rollbar = new Rollbar({
 // record a generic message and send it to Rollbar
 rollbar.log("Hello world!");
 
+const pets = ['dogs', 'cats', 'fish']
+
+app.get('/api/pets/', (req, res) => {
+    res.status(200).send(pets)
+    rollbar.log('someone requested to see the pets')
+})
 
 
 
