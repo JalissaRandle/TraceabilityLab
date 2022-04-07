@@ -30,9 +30,9 @@ app.get('/api/pets/', (req, res) => {
     rollbar.log('someone requested to see the pets')
 })
 
-app.post('/api/pets/' (req,res) => {
+// app.post('/api/pets/' (req,res) => {
 
-})
+// })
 
 
 
