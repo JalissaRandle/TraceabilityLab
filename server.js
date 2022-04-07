@@ -21,7 +21,7 @@ rollbar.log("Hello world!");
 
 const pets = ['dogs', 'cats', 'fish']
  
-app.get('/', () => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/index.html'))
 })
 
