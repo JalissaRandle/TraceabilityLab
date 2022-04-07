@@ -18,6 +18,10 @@ rollbar.log("Hello world!");
 
 const pets = ['dogs', 'cats', 'fish']
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '/index.html'))
+})
+
 app.get('/api/pets/', (req, res) => {
     res.status(200).send(pets)
     rollbar.log('someone requested to see the pets')
